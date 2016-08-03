@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<node &#35;0<br/>org_fraud_prevalence &le; 0.45<br/>gini = 0.0556<br/>samples = 98166<br/>value = [95356, 2810]<br/>class = Not Fraud>, fillcolor="#e58139f7"] ;
+1 [label=<node &#35;1<br/>first_transaction_amount &le; 281.79<br/>gini = 0.0523<br/>samples = 97934<br/>value = [95304, 2630]<br/>class = Not Fraud>, fillcolor="#e58139f8"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<node &#35;2<br/>org_fraud_prevalence &le; 0.0625<br/>gini = 0.035<br/>samples = 79347<br/>value = [77933, 1414]<br/>class = Not Fraud>, fillcolor="#e58139fa"] ;
+1 -> 2 ;
+3 [label=<node &#35;3<br/>gini = 0.0309<br/>samples = 75461<br/>value = [74276, 1185]<br/>class = Not Fraud>, fillcolor="#e58139fb"] ;
+2 -> 3 ;
+4 [label=<node &#35;4<br/>gini = 0.1109<br/>samples = 3886<br/>value = [3657, 229]<br/>class = Not Fraud>, fillcolor="#e58139ef"] ;
+2 -> 4 ;
+5 [label=<node &#35;5<br/>time_to_first_txn &le; 6.5<br/>gini = 0.1223<br/>samples = 18587<br/>value = [17371, 1216]<br/>class = Not Fraud>, fillcolor="#e58139ed"] ;
+1 -> 5 ;
+6 [label=<node &#35;6<br/>gini = 0.2553<br/>samples = 4620<br/>value = [3926, 694]<br/>class = Not Fraud>, fillcolor="#e58139d2"] ;
+5 -> 6 ;
+7 [label=<node &#35;7<br/>gini = 0.072<br/>samples = 13967<br/>value = [13445, 522]<br/>class = Not Fraud>, fillcolor="#e58139f5"] ;
+5 -> 7 ;
+8 [label=<node &#35;8<br/>org_fraud_prevalence &le; 0.6458<br/>gini = 0.3478<br/>samples = 232<br/>value = [52, 180]<br/>class = Fraud>, fillcolor="#399de5b5"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label=<node &#35;9<br/>time_to_first_txn &le; 5.5<br/>gini = 0.4996<br/>samples = 101<br/>value = [49, 52]<br/>class = Fraud>, fillcolor="#399de50f"] ;
+8 -> 9 ;
+10 [label=<node &#35;10<br/>gini = 0.2235<br/>samples = 39<br/>value = [5, 34]<br/>class = Fraud>, fillcolor="#399de5da"] ;
+9 -> 10 ;
+11 [label=<node &#35;11<br/>gini = 0.4121<br/>samples = 62<br/>value = [44, 18]<br/>class = Not Fraud>, fillcolor="#e5813997"] ;
+9 -> 11 ;
+12 [label=<node &#35;12<br/>first_transaction_amount &le; 0.255<br/>gini = 0.0448<br/>samples = 131<br/>value = [3, 128]<br/>class = Fraud>, fillcolor="#399de5f9"] ;
+8 -> 12 ;
+13 [label=<node &#35;13<br/>gini = 0.5<br/>samples = 2<br/>value = [1, 1]<br/>class = Not Fraud>, fillcolor="#e5813900"] ;
+12 -> 13 ;
+14 [label=<node &#35;14<br/>gini = 0.0305<br/>samples = 129<br/>value = [2, 127]<br/>class = Fraud>, fillcolor="#399de5fb"] ;
+12 -> 14 ;
+}
